@@ -69,8 +69,8 @@ class JSONSerialization extends App {
 
   implicit object FeedConverter extends JSONConverter[Feed] {
     def convert(feed: Feed): JSONValue = JSONObject(Map(
-      "user" -> feed.user.toJSON, // TODO
-      "posts" -> JSONArray(feed.posts.map(_.toJSON)) // TODO
+      "user" -> feed.user.toJSON,
+      "posts" -> JSONArray(feed.posts.map(_.toJSON))
     ))
   }
 
